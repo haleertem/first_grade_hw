@@ -1,33 +1,46 @@
-#include <iostream>
-using namespace std; 
+//Hale Ertem 1306210068 22.12.2022 Lab Assignment #4//
 
-int main() {
-  int w,h,e;
-  cout<< "Please select the action you want to do:\n";
-  cout<<"1)Subtraction\n";
-  cout<<"2)Addition\n";
-  cout<<"3)Multiplication\n";
-  cout<<"4)Modulo\n";
-  cout<<"5)Division\n";
-  cin>> w;
-  cout<<"Please type the first number:\n";
-  cin>> h;
-  cout<<"Please type the second number:\n";
-  cin>> e;
-  if (w==1){
-   int sum=h-e;
-  cout<<"Result= "<<sum;}
-  if (w==2){
-   int  sum=h+e;
-    cout<<"Result= "<<sum;}
-  if (w==3){
-   int sum=h*e;
-  cout<<"Result= "<<sum;}
-  if (w==4){
-  int sum=h%e;
-  cout<<"Result= "<<sum;}
- if (w==5){
-   float sum=float(h)/float(e);
-  cout<<"Result= "<<sum;} 
-  }
-  //Hafize Hale Ertem
+#include <iostream>
+#include <math.h> //fonksiyonlara işlem yaptırabilmek için matematik kütüphanesini kullandım//
+using namespace std;
+
+int sum(int h,int e){
+  return h+e;
+}
+
+int difference(int h, int e){
+  return h-e;
+}
+
+int product(int h, int e){
+  return h*e;
+}
+
+float quotient(int h, float e){
+  return h/e;
+}
+
+int main()
+{
+  int h,action,a;
+  float e;
+  
+  cout<<"Plese enter two values to calculate their sum, difference, product and quotient:\n";
+  
+  etiket1: //işlemden sonra dönmek istediğim yer//
+  
+  cin>>h>>e;
+
+    cout<<h<<"+"<<e<<"="<<sum(h,e)<<endl;
+     
+    cout<<h<<"-"<<e<<"="<<difference(h,e)<<endl;
+   
+    cout<<h<<"*"<<e<<"="<<product(h,e)<<endl;
+  
+    cout<<h<<"/"<<e<<"="<<quotient(h,e)<<endl;
+
+    cout<<"You can continue to calculation. Enjoy it!\n";
+
+  goto etiket1; // işlem sonunda başa dönebilmek için goto ifadesini kullandım//
+  return 0;
+}
