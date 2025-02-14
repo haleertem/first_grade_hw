@@ -10,6 +10,7 @@ int main() {
   cout<<"C)Celcius\n";
   cout<<"F)Fahrenheit\n";
   cout<<"K)Kelvin\n";
+  etiket1:
   cin>>temp;
   cout<<"Exit a temperature value:\n";
   cin>>h;
@@ -32,10 +33,11 @@ int main() {
     cout<<"Result is:"<<sum5<<"°C\n";
    sum6=(h-273.15)*1.8+32;
     cout<<"Result is:"<<sum6<<"°F\n";
+    break;
   default:
     cout<<"Wrong value! Enter the temperature(C,F,K):\n";
+    goto etiket1;
     }
-  
 return(0);
     }
 //Hafize Hale Ertem 
